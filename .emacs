@@ -18,9 +18,9 @@
 ))
 
 (add-to-list 'load-path "~/.emacs.d/site-lisp/magit/lisp")
-(require 'magit)
-(with-eval-after-load 'info
 
+(with-eval-after-load 'info
+(require 'magit)
 (info-initialize)
   
 (add-to-list 'Info-directory-list "~/.emacs.d/site-lisp/magit/Documentation/"))
