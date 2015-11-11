@@ -17,12 +17,12 @@
  (custom-set-faces
 ))
 
+(add-to-list 'load-path "~/.emacs.d/site-lisp")
 (add-to-list 'load-path "~/.emacs.d/site-lisp/magit/lisp")
 
 (with-eval-after-load 'info
 (require 'magit)
 (info-initialize)
-  
 (add-to-list 'Info-directory-list "~/.emacs.d/site-lisp/magit/Documentation/"))
 
 (add-to-list 'load-path "~/.emacs.d/site-lisp/neotree")
@@ -36,3 +36,7 @@
 (global-set-key (kbd "C-, g s") 'magit-status)
 
 (package-initialize)
+
+(add-to-list 'load-path "~/.emacs.d/evil")
+(require 'evil)
+(evil-mode 1)
