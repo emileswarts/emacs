@@ -35,6 +35,8 @@
 
 (global-set-key (kbd "C-, g s") 'magit-status)
 
+(global-set-key (kbd "C-, g b") 'magit-blame)
+
 (package-initialize)
 
 (add-to-list 'load-path "~/.emacs.d/evil")
