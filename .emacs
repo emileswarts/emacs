@@ -18,6 +18,20 @@
  (custom-set-faces
 ))
 
+(require 'evil-leader)
+(global-evil-leader-mode)
+(evil-leader/set-leader ",")
+(evil-leader/set-key
+  "e" 'find-file
+  "b" 'switch-to-buffer
+  "k" 'kill-buffer)
+
+(add-to-list 'load-path "~/.emacs.d/evil")
+(require 'evil)
+(evil-mode 1)
+(custom-set-variables
+ '(initial-frame-alist (quote ((fullscreen . maximized)))))
+
 (add-to-list 'load-path "~/.emacs.d/elpa/evil-1.2.8")
 (add-to-list 'load-path "~/.emacs.d/site-lisp")
 (add-to-list 'load-path "~/.emacs.d/site-lisp/magit/lisp")
@@ -38,17 +52,3 @@
 (global-set-key (kbd "C-, g s") 'magit-status)
 
 (global-set-key (kbd "C-, g b") 'magit-blame)
-(require 'evil-leader)
-(evil-leader/set-key
-  "e" 'find-file
-  "b" 'switch-to-buffer
-  "k" 'kill-buffer)
-
-
-
-
-(add-to-list 'load-path "~/.emacs.d/evil")
-(require 'evil)
-(evil-mode 1)
-(custom-set-variables
- '(initial-frame-alist (quote ((fullscreen . maximized)))))
