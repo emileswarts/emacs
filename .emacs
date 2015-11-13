@@ -24,6 +24,8 @@
 (evil-leader/set-key
   "e" 'find-file
   "b" 'switch-to-buffer
+  "d" 'split-window-right
+  "f" 'enlarge-window-horizontally
   "k" 'kill-buffer)
 
 (add-to-list 'load-path "~/.emacs.d/evil")
