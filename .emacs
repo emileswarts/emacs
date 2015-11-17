@@ -57,3 +57,5 @@
 (global-set-key (kbd "C-, g s") 'magit-status)
 
 (global-set-key (kbd "C-, g b") 'magit-blame)
+
+(setq vc-follow-symlinks t)
