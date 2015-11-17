@@ -52,12 +52,6 @@
 
 (require 'neotree)
 
-(global-set-key (kbd "C-, n") 'neotree-toggle)
-
-(global-set-key (kbd "C-, g l") 'magit-log)
-
-(global-set-key (kbd "C-, g s") 'magit-status)
-
-(global-set-key (kbd "C-, g b") 'magit-blame)
+(global-set-key (kbd "C-l") 'other-window)
 
 (setq vc-follow-symlinks t)
