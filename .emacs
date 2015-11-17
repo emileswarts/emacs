@@ -22,15 +22,16 @@
 (global-evil-leader-mode)
 (evil-leader/set-leader ",")
 (evil-leader/set-key
-  "f" 'find-file
-  "b" 'switch-to-buffer
-  "gs" 'magit-status
-  "gp" 'magit-push
-  "l" 'global-linum-mode
   "d" 'split-window-right
-  "nt" 'neotree-toggle
   "f" 'enlarge-window-horizontally
-  "k" 'kill-buffer)
+  "gd" 'magit-diff
+  "gp" 'magit-push
+  "gs" 'magit-status
+  "l" 'global-linum-mode
+  "," 'switch-to-buffer
+  "k" 'kill-buffer
+  "w" 'save-buffer
+  "nt" 'neotree-toggle)
 
 (add-to-list 'load-path "~/.emacs.d/evil")
 (require 'evil)
