@@ -1,6 +1,7 @@
 (package-initialize)
 (require 'ido)
 (require 'package)
+(setq evil-want-C-i-jump nil)
 
 (add-to-list 'package-archives
              '("melpa-stable" . "http://stable.melpa.org/packages/") t)
@@ -60,5 +61,11 @@
 (require 'neotree)
 
 (global-set-key (kbd "C-l") 'other-window)
+(global-set-key (kbd "C-h") 'other-window)
+(global-set-key (kbd "C-u") 'scroll-up-command)
 
 (setq vc-follow-symlinks t)
+
+(setq key-chord-two-keys-delay 0.2)
+(key-chord-define evil-insert-state-map "nt" 'evil-normal-state)
+(key-chord-mode 1)
