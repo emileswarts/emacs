@@ -3,7 +3,6 @@
 (require 'package)
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 
-(setq evil-want-C-i-jump nil)
 
 (add-to-list 'package-archives
              '("melpa-stable" . "http://stable.melpa.org/packages/") t)
@@ -30,7 +29,8 @@
 (evil-leader/set-key
   "a" 'switch-to-previous-buffer
   "d" 'split-window-right
-  "f" 'enlarge-window-horizontally
+  "e" 'dired
+  "f" 'find-file
   "gd" 'magit-diff
   "gp" 'magit-push
   "gs" 'magit-status
@@ -41,7 +41,9 @@
   "nt" 'neotree-toggle
   "q" 'delete-frame
   )
+(set-face-attribute 'default nil :height 140)
 
+(setq evil-want-C-i-jump nil)
 (add-to-list 'load-path "~/.emacs.d/evil")
 (require 'evil)
 (evil-mode 1)
@@ -70,3 +72,4 @@
 (setq key-chord-two-keys-delay 0.2)
 (key-chord-define evil-insert-state-map "nt" 'evil-normal-state)
 (key-chord-mode 1)
+
