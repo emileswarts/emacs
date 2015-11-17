@@ -22,9 +22,12 @@
 (global-evil-leader-mode)
 (evil-leader/set-leader ",")
 (evil-leader/set-key
-  "e" 'find-file
+  "f" 'find-file
   "b" 'switch-to-buffer
+  "gs" 'magit-status
+  "l" 'global-linum-mode
   "d" 'split-window-right
+  "nt" 'neotree-toggle
   "f" 'enlarge-window-horizontally
   "k" 'kill-buffer)
 
