@@ -25,6 +25,7 @@
   "f" 'find-file
   "b" 'switch-to-buffer
   "gs" 'magit-status
+  "gp" 'magit-push
   "l" 'global-linum-mode
   "d" 'split-window-right
   "nt" 'neotree-toggle
