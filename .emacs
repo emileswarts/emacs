@@ -18,10 +18,15 @@
  (custom-set-faces
 ))
 
+(defun switch-to-previous-buffer ()
+  (interactive)
+  (switch-to-buffer (other-buffer (current-buffer) 1)))
+
 (require 'evil-leader)
 (global-evil-leader-mode)
 (evil-leader/set-leader ",")
 (evil-leader/set-key
+  "a" 'switch-to-previous-buffer
   "d" 'split-window-right
   "f" 'enlarge-window-horizontally
   "gd" 'magit-diff
@@ -31,7 +36,9 @@
   "," 'switch-to-buffer
   "k" 'kill-buffer
   "w" 'save-buffer
-  "nt" 'neotree-toggle)
+  "nt" 'neotree-toggle
+  "q" 'delete-frame
+  )
 
 (add-to-list 'load-path "~/.emacs.d/evil")
 (require 'evil)
