@@ -1,6 +1,8 @@
 (package-initialize)
 (require 'ido)
 (require 'package)
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
+
 (setq evil-want-C-i-jump nil)
 
 (add-to-list 'package-archives
@@ -12,9 +14,8 @@
 (ido-mode t)
 
 (tool-bar-mode -1)
-
+(load-theme 'monokai t)
 (custom-set-variables
- '(custom-enabled-themes (quote (tango-dark)))
  '(ido-mode (quote both) nil (ido))
  (custom-set-faces
 ))
