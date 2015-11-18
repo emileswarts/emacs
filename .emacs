@@ -31,26 +31,45 @@
 (defun ten-lines-down ()
   (interactive)
   (next-line 10))
+(require 'rinari)
+(global-rinari-mode)
 
 (require 'evil-leader)
 (global-evil-leader-mode)
 (evil-leader/set-leader ",")
 (evil-leader/set-key
   "a" 'switch-to-previous-buffer
+  ;"b"
+  ;"c"
   "d" 'split-window-right
   "e" 'dired
-  "f" 'ido-find-file
   "gd" 'magit-diff
   "gp" 'magit-push
   "gs" 'magit-status
-  "l" 'global-linum-mode
-  "," 'switch-to-buffer
+  ;"h"
+  ;"i"
+  ;"j"
   "k" 'kill-buffer
+  "l" 'global-linum-mode
+  "m" 'fiplr-find-file
+  "nt" 'neotree-toggle
+  ;"n"
+  ;"o"
+  ;"p"
+  "tm" 'rinari-find-model
+  "tc" 'rinari-find-controller
+  "ta" 'rinari-find-configuration
+  "tr" 'rinari-find-routes
+  ;"s"
+  ;"t"
+  ;"u"
   "v" 'highlight-to-end-of-line
   "w" 'save-buffer
   "x" 'whitespace-mode
-  "nt" 'neotree-toggle
+  ;"y"
   "q" 'delete-window
+  ;"z"
+  "," 'switch-to-buffer
   )
 
 (set-face-attribute 'default nil :height 140)
@@ -81,7 +100,6 @@
         ((looking-at "\\s\)") (forward-char 1) (backward-list 1))
         (t (self-insert-command (or arg 1)))))
 
-
 (define-key evil-normal-state-map (kbd "C-l") 'other-window)
 (define-key evil-normal-state-map (kbd "C-h") 'other-window)
 (define-key evil-normal-state-map (kbd "C-u") 'scroll-up-command)
@@ -102,3 +120,4 @@
 (setq-default tab-always-indent nil)
 
 (setq make-backup-files nil) 
+
