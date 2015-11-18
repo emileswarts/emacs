@@ -28,6 +28,10 @@
   (move-end-of-line nil)
   (left-char))
 
+(defun ten-lines-down ()
+  (interactive)
+  (next-line 10))
+
 (require 'evil-leader)
 (global-evil-leader-mode)
 (evil-leader/set-leader ",")
