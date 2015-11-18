@@ -50,22 +50,21 @@
 (custom-set-variables
  '(initial-frame-alist (quote ((fullscreen . maximized)))))
 
-(add-to-list 'load-path "~/.emacs.d/elpa/evil-1.2.8")
 (add-to-list 'load-path "~/.emacs.d/site-lisp")
 (add-to-list 'load-path "~/.emacs.d/site-lisp/magit/lisp")
 
 (with-eval-after-load 'info
-(require 'magit)
-(info-initialize)
-(add-to-list 'Info-directory-list "~/.emacs.d/site-lisp/magit/Documentation/"))
+  (require 'magit)
+  (info-initialize)
+  (add-to-list 'Info-directory-list "~/.emacs.d/site-lisp/magit/Documentation/"))
 
 (add-to-list 'load-path "~/.emacs.d/site-lisp/neotree")
 
 (require 'neotree)
 
-(global-set-key (kbd "C-l") 'other-window)
-(global-set-key (kbd "C-h") 'other-window)
-(global-set-key (kbd "C-u") 'scroll-up-command)
+(define-key evil-normal-state-map (kbd "C-l") 'other-window)
+(define-key evil-normal-state-map (kbd "C-h") 'other-window)
+(define-key evil-normal-state-map (kbd "C-u") 'scroll-up-command)
 
 (setq vc-follow-symlinks t)
 
@@ -73,3 +72,7 @@
 (key-chord-define evil-insert-state-map "nt" 'evil-normal-state)
 (key-chord-mode 1)
 
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 2)
+(setq tab-width 2)
+(setq-default tab-always-indent nil)
