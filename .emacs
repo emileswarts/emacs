@@ -76,3 +76,5 @@
 (setq-default tab-width 2)
 (setq tab-width 2)
 (setq-default tab-always-indent nil)
+
+(setq make-backup-files nil) 
