@@ -62,9 +62,16 @@
 
 (require 'neotree)
 
+(defun goto-match-paren (arg)
+  (interactive "p")
+  (cond ((looking-at "\\s\(") (forward-list 1) (backward-char 1))
+        ((looking-at "\\s\)") (forward-char 1) (backward-list 1))
+        (t (self-insert-command (or arg 1)))))
+
 (define-key evil-normal-state-map (kbd "C-l") 'other-window)
 (define-key evil-normal-state-map (kbd "C-h") 'other-window)
 (define-key evil-normal-state-map (kbd "C-u") 'scroll-up-command)
+(define-key evil-normal-state-map (kbd "TAB") 'goto-match-paren)
 
 (setq vc-follow-symlinks t)
 
