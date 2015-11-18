@@ -39,7 +39,7 @@
   "a" 'switch-to-previous-buffer
   "d" 'split-window-right
   "e" 'dired
-  "f" 'find-file
+  "f" 'ido-find-file
   "gd" 'magit-diff
   "gp" 'magit-push
   "gs" 'magit-status
