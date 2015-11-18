@@ -16,12 +16,17 @@
 (load-theme 'monokai t)
 (custom-set-variables
  '(ido-mode (quote both) nil (ido))
- (custom-set-faces
-))
+ (custom-set-faces))
 
 (defun switch-to-previous-buffer ()
   (interactive)
   (switch-to-buffer (other-buffer (current-buffer) 1)))
+
+(defun highlight-to-end-of-line ()
+  (interactive)
+  (set-mark-command nil)
+  (move-end-of-line nil)
+  (left-char))
 
 (require 'evil-leader)
 (global-evil-leader-mode)
@@ -37,6 +42,7 @@
   "l" 'global-linum-mode
   "," 'switch-to-buffer
   "k" 'kill-buffer
+  "v" 'highlight-to-end-of-line
   "w" 'save-buffer
   "nt" 'neotree-toggle
   "q" 'delete-window
