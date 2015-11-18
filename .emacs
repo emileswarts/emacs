@@ -93,6 +93,7 @@
 
 (setq key-chord-two-keys-delay 0.2)
 (key-chord-define evil-insert-state-map "nt" 'evil-normal-state)
+(key-chord-define evil-visual-state-map "nt" 'evil-normal-state)
 (key-chord-mode 1)
 
 (setq-default indent-tabs-mode nil)
