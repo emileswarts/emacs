@@ -39,7 +39,7 @@
   "k" 'kill-buffer
   "w" 'save-buffer
   "nt" 'neotree-toggle
-  "q" 'delete-frame
+  "q" 'delete-window
   )
 (set-face-attribute 'default nil :height 140)
 
