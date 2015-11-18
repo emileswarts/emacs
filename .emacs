@@ -48,11 +48,14 @@
   "k" 'kill-buffer
   "v" 'highlight-to-end-of-line
   "w" 'save-buffer
+  "x" 'whitespace-mode
   "nt" 'neotree-toggle
   "q" 'delete-window
   )
+
 (set-face-attribute 'default nil :height 140)
 
+(setq evil-want-C-i-jump nil)
 (setq evil-want-C-i-jump nil)
 (add-to-list 'load-path "~/.emacs.d/evil")
 (require 'evil)
@@ -78,12 +81,15 @@
         ((looking-at "\\s\)") (forward-char 1) (backward-list 1))
         (t (self-insert-command (or arg 1)))))
 
+
 (define-key evil-normal-state-map (kbd "C-l") 'other-window)
 (define-key evil-normal-state-map (kbd "C-h") 'other-window)
 (define-key evil-normal-state-map (kbd "C-u") 'scroll-up-command)
 (define-key evil-normal-state-map (kbd "TAB") 'goto-match-paren)
+(define-key evil-normal-state-map (kbd "SPC") 'ten-lines-down)
 
 (setq vc-follow-symlinks t)
+(setq ido-enable-flex-matching t)
 
 (setq key-chord-two-keys-delay 0.2)
 (key-chord-define evil-insert-state-map "nt" 'evil-normal-state)
