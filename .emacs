@@ -8,7 +8,7 @@
              '("melpa-stable" . "http://stable.melpa.org/packages/") t)
 
 (add-to-list 'package-archives
-	     '("marmalade" . "http://marmalade-repo.org/packages/"))
+             '("marmalade" . "http://marmalade-repo.org/packages/"))
 
 (ido-mode t)
 
