@@ -102,7 +102,8 @@
 
 (define-key evil-normal-state-map (kbd "C-l") 'other-window)
 (define-key evil-normal-state-map (kbd "C-h") 'other-window)
-(define-key evil-normal-state-map (kbd "C-u") 'scroll-up-command)
+(define-key evil-insert-state-map (kbd "C-h") 'delete-backward-char)
+(define-key evil-normal-state-map (kbd "C-u") 'scroll-down-command)
 (define-key evil-normal-state-map (kbd "TAB") 'goto-match-paren)
 (define-key evil-normal-state-map (kbd "SPC") 'ten-lines-down)
 
