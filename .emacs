@@ -43,6 +43,7 @@
   ;"c"
   "d" 'split-window-right
   "e" 'dired
+  ;"f"
   "gd" 'magit-diff
   "gp" 'magit-push
   "gs" 'magit-status
@@ -62,19 +63,18 @@
   "tr" 'rinari-find-routes
   ;"s"
   ;"t"
+  "q" 'delete-window
   ;"u"
   "v" 'highlight-to-end-of-line
   "w" 'save-buffer
   "x" 'whitespace-mode
   ;"y"
-  "q" 'delete-window
   ;"z"
   "," 'switch-to-buffer
   )
 
 (set-face-attribute 'default nil :height 140)
 
-(setq evil-want-C-i-jump nil)
 (setq evil-want-C-i-jump nil)
 (add-to-list 'load-path "~/.emacs.d/evil")
 (require 'evil)
