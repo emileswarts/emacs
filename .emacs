@@ -15,8 +15,15 @@
 (tool-bar-mode -1)
 (load-theme 'monokai t)
 (custom-set-variables
+ '(custom-safe-themes
+   (quote
+    ("094f2c4dc01b7ebe70075ab7dba2e3f0fbab788af38ec574b2939c9454fed996" default)))
+ '(global-linum-mode t)
  '(ido-mode (quote both) nil (ido))
- (custom-set-faces))
+ '(initial-frame-alist (quote ((fullscreen . maximized))))
+ '(nil nil t)
+ '(require-final-newline (quote visit))
+ '(show-trailing-whitespace t))
 
 (defun switch-to-previous-buffer ()
   (interactive)
@@ -80,9 +87,6 @@
 (require 'evil)
 (evil-mode 1)
 
-(custom-set-variables
- '(initial-frame-alist (quote ((fullscreen . maximized)))))
-
 (add-to-list 'load-path "~/.emacs.d/site-lisp")
 (add-to-list 'load-path "~/.emacs.d/site-lisp/magit/lisp")
 
@@ -124,3 +128,4 @@
 (setq make-backup-files nil) 
 
 (setq ring-bell-function 'ignore)
+(custom-set-faces)
