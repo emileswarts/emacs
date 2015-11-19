@@ -111,10 +111,24 @@
         ((looking-at "\\s\)") (forward-char 1) (backward-list 1))
         (t (self-insert-command (or arg 1)))))
 
+(add-hook 'neotree-mode-hook
+            (lambda ()
+              (define-key evil-normal-state-local-map (kbd "i") 'neotree-hidden-file-toggle)
+              (define-key evil-normal-state-local-map (kbd "d") (neotree-make-executor
+                                                                    :file-fn 'neo-open-file-vertical-split))
+              (define-key evil-normal-state-local-map (kbd "d") (neotree-make-executor
+                                                                    :file-fn 'neo-open-file-vertical-split))
+              (define-key evil-normal-state-local-map (kbd "q") 'neotree-hide)
+              (define-key evil-normal-state-local-map (kbd "r") 'neotree-rename-node)
+              (define-key evil-normal-state-local-map (kbd "s") 'neotree-stretch-toggle)
+              (define-key evil-normal-state-local-map (kbd "c") 'neotree-change-root)
+              (define-key evil-normal-state-local-map (kbd "RET") 'neotree-enter)))
+
 (define-key evil-normal-state-map (kbd "C-l") 'other-window)
 (define-key evil-normal-state-map (kbd "C-h") 'other-window)
 (define-key evil-insert-state-map (kbd "C-h") 'delete-backward-char)
 (define-key evil-normal-state-map (kbd "C-u") 'scroll-down-command)
+(define-key evil-normal-state-map (kbd "C-s") 'term)
 (define-key evil-normal-state-map (kbd "TAB") 'goto-match-paren)
 (define-key evil-normal-state-map (kbd "SPC") 'ten-lines-down)
 
