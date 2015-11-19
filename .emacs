@@ -52,6 +52,7 @@
   "e" 'dired
   "f" 'find-file
   "gd" 'magit-diff
+  "gl" 'magit-log
   "gp" 'magit-push
   "gs" 'magit-status
   ;"h"
@@ -125,7 +126,10 @@
 (setq tab-width 2)
 (setq-default tab-always-indent nil)
 
-(setq make-backup-files nil) 
+(setq make-backup-files nil)
 
 (setq ring-bell-function 'ignore)
 (custom-set-faces)
+
+(add-hook 'ruby-mode-hook 'robe-mode)
+(blink-cursor-mode 0)
