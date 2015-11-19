@@ -44,6 +44,18 @@
 (require 'evil-leader)
 (global-evil-leader-mode)
 (evil-leader/set-leader ",")
+
+(defun win-resize-enlarge-vert ()
+  (interactive)
+  (cond
+   ((equal "left" (win-resize-left-or-right)) (enlarge-window-horizontally -1))
+   ((equal "right" (win-resize-left-or-right)) (enlarge-window-horizontally 1))
+   ((equal "mid" (win-resize-left-or-right)) (enlarge-window-horizontally -1))))
+
+(defun enlarge-a-lot ()
+    (interactive)
+  (enlarge-window-horizontally 15))
+
 (evil-leader/set-key
   "a" 'switch-to-previous-buffer
   ;"b"
