@@ -45,13 +45,6 @@
 (global-evil-leader-mode)
 (evil-leader/set-leader ",")
 
-(defun win-resize-enlarge-vert ()
-  (interactive)
-  (cond
-   ((equal "left" (win-resize-left-or-right)) (enlarge-window-horizontally -1))
-   ((equal "right" (win-resize-left-or-right)) (enlarge-window-horizontally 1))
-   ((equal "mid" (win-resize-left-or-right)) (enlarge-window-horizontally -1))))
-
 (defun enlarge-a-lot ()
     (interactive)
   (enlarge-window-horizontally 15))
@@ -74,7 +67,7 @@
   "l" 'global-linum-mode
   "m" 'fiplr-find-file
   "nt" 'neotree-toggle
-  ;"n"
+  "n" 'enlarge-a-lot
   ;"o"
   ;"p"
   "q" 'delete-window
