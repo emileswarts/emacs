@@ -153,3 +153,4 @@
 (add-hook 'ruby-mode-hook 'robe-mode)
 (blink-cursor-mode 0)
 (auto-save-mode 0)
+(setq x-select-enable-clipboard t)
