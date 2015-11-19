@@ -43,7 +43,7 @@
   ;"c"
   "d" 'split-window-right
   "e" 'dired
-  ;"f"
+  "f" 'find-file
   "gd" 'magit-diff
   "gp" 'magit-push
   "gs" 'magit-status
@@ -57,13 +57,13 @@
   ;"n"
   ;"o"
   ;"p"
+  "q" 'delete-window
+  "r" 'inf-ruby
+  ;"s"
   "tm" 'rinari-find-model
   "tc" 'rinari-find-controller
   "ta" 'rinari-find-configuration
   "tr" 'rinari-find-routes
-  ;"s"
-  ;"t"
-  "q" 'delete-window
   ;"u"
   "v" 'highlight-to-end-of-line
   "w" 'save-buffer
@@ -79,6 +79,7 @@
 (add-to-list 'load-path "~/.emacs.d/evil")
 (require 'evil)
 (evil-mode 1)
+
 (custom-set-variables
  '(initial-frame-alist (quote ((fullscreen . maximized)))))
 
