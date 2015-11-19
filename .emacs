@@ -121,3 +121,4 @@
 
 (setq make-backup-files nil) 
 
+(setq ring-bell-function 'ignore)
